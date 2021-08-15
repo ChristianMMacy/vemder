@@ -6,28 +6,21 @@ public class CreateBoundaries : MonoBehaviour
 {
     public GameObject TopRight;
     public GameObject BottomLeft;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()
     {
-        SetupBoundaries();
+        UpdateBoundaries();
     }
 
-    void SetupBoundaries()
+    void UpdateBoundaries()
     {
-        Vector3 topRightPoint = new Vector3();
-        Vector3 bottomLeftPoint = new Vector3();
-
-        topRightPoint = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.nearClipPlane));
+        // Move the top right boundary to the top right of the current screen resolution
+        var topRightPoint = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.nearClipPlane));
         TopRight.transform.position = topRightPoint;
 
-        bottomLeftPoint = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, Camera.main.nearClipPlane));
+        // Move the bottom left boundary to the bottom left of the current screen resolution
+        var bottomLeftPoint = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, Camera.main.nearClipPlane));
         BottomLeft.transform.position = bottomLeftPoint;
     }
 }

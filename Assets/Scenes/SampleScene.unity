@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 275502477}
   m_Layer: 0
-  m_Name: BottomLeft
+  m_Name: BottomLeftBoundary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -510,8 +510,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30810fb7b52671a4da099704f772c55e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 518915341}
-  speed: 500
+  Rb: {fileID: 518915341}
+  Speed: 100
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,7 +840,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1952667137}
   m_Layer: 0
-  m_Name: TopRight
+  m_Name: TopRightBoundary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
